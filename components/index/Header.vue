@@ -61,28 +61,21 @@
     filter: blur(3px);
   }
   &::after {
-  position: absolute;
-  content: '';
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-color: #3F5D45;
-  opacity: 80%;
-  }
-  &:hover {
-    & .cube__text {
-      color: #3F5D45;
-    }
-    &::after {
     position: absolute;
     content: '';
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
-    background-color: #FFE180;
+    background-color: #3F5D45;
     opacity: 80%;
+  }
+  &:hover {
+    & .cube__text {
+      color: #3F5D45;
+    }
+    &::after {
+      background-color: #FFE180;
     }
   }
 }
