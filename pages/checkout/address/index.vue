@@ -40,9 +40,11 @@
     <div class="mb-8 grid grid-cols-1">
       <Input id="address" name="address" placeholder="幸福路 520 號" class="pl-5" />
     </div>
-    <div class="-mx-8 -mb-8 py-4 bg-warning text-primary text-2xl font-semibold text-center cursor-pointer">
-      下一步
-    </div>
+    <nuxt-link to="/checkout/payment">
+      <div class="-mx-8 -mb-8 py-4 bg-warning text-primary text-2xl font-semibold text-center cursor-pointer">
+        下一步
+      </div>
+    </nuxt-link>
   </div>
 </template>
 
