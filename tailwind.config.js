@@ -4,6 +4,10 @@ module.exports = {
     // purgeLayersByDefault: true,
   },
   purge: [
+    {
+      enabled: true,
+      content: ['./**/*.vue'],
+    },
   ],
   theme: {
     textColor: {
