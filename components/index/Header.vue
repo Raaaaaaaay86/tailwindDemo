@@ -68,7 +68,7 @@
     top: 0;
     left: 0;
     background-color: #3F5D45;
-    opacity: 80%;
+    opacity: .8;
   }
   &:hover {
     & .cube__text {
