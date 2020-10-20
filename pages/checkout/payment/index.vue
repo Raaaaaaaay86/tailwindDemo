@@ -37,14 +37,16 @@
     <div class="mb-8 grid grid-cols-2">
       <div class="flex flex-col">
         <label class="mb-2" for="tel">
-            背面末三碼
+          背面末三碼
         </label>
-        <Input id="verify-code" name="verify-code" placeholder="幸福路 520 號" class="pl-5" />
+        <Input id="verify-code" name="verify-code" placeholder="123" class="pl-5" />
       </div>
     </div>
-    <div class="-mx-8 -mb-8 py-4 bg-warning text-primary text-2xl font-semibold text-center cursor-pointer">
-      下一步
-    </div>
+    <nuxt-link to="/checkout/invoice">
+      <div class="-mx-8 -mb-8 py-4 bg-warning text-primary text-2xl font-semibold text-center cursor-pointer">
+        下一步
+      </div>
+    </nuxt-link>
   </div>
 </template>
 

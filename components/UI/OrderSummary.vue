@@ -15,8 +15,10 @@
       <span>總計</span>
       <span>NT$ 300</span>
     </div>
-    <div class="-mx-5 py-4 text-center text-2xl bg-warning text-primary cursor-pointer">
-      結帳
-    </div>
+    <nuxt-link to="/checkout/address">
+      <div class="-mx-5 py-4 text-center text-2xl bg-warning text-primary cursor-pointer">
+        結帳
+      </div>
+    </nuxt-link>
   </div>
 </template>

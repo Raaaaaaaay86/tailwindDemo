@@ -1,16 +1,19 @@
 <template>
-  <div class="steps w-40 flex justify-between">
+  <div
+    class="steps w-40 flex justify-between"
+    :class="[{ 'success' : success }]"
+  >
     <div
       class="step"
-      :class="[ step === '1' ? 'active' : '' ]"
+      :class="[{ 'success' : success }, { 'now' : step === '1' }, { 'done' : step === '2' || step === '3' } ]"
     />
     <div
       class="step"
-      :class="[ step === '2' ? 'active' : '' ]"
+      :class="[{ 'success' : success }, { 'now' : step === '2' }, { 'done' : step === '3' } ]"
     />
     <div
       class="step"
-      :class="[ step === '3' ? 'active' : '' ]"
+      :class="[{ 'success' : success }, { 'now' : step === '3' } ]"
     />
   </div>
 </template>
@@ -21,34 +24,18 @@ export default {
     step: {
       type: String,
       required: false,
-      default: '1',
+      default: '0',
+    },
+    success: {
+      type: Boolean,
+      requried: false,
+      default: false,
     },
   },
 };
 </script>
 
 <style lang="scss" scoped>
-.active{
-  background:#EAF0ED !important;
-  border: none !important;
-  width: 17px;
-  height: 17px;
-  border-radius: 100%;
-  position: relative;
-  z-index: 1;
-  &::after{
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 14px;
-    height: 14px;
-    border: 1px solid #3F5D45;
-    border-radius: 100%;
-    transform: translate(-50%, -50%);
-  }
-}
-
 .steps{
   position: relative;
   &::after{
@@ -71,5 +58,66 @@ export default {
   background: #3F5D45;
   border-radius: 100%;
   z-index: 1;
+}
+
+.now{
+  background:#EAF0ED;
+  border: none;
+  width: 17px;
+  height: 17px;
+  border-radius: 100%;
+  position: relative;
+  z-index: 1;
+  &::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 14px;
+    height: 14px;
+    border: 1px solid #3F5D45;
+    border-radius: 100%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.done{
+  background:#EAF0ED;
+  border: none;
+  width: 17px;
+  height: 17px;
+  border-radius: 100%;
+  position: relative;
+  z-index: 1;
+  &::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 14px;
+    height: 14px;
+    border-radius: 100%;
+    background-image: url('../../assets/svg/icon__done.svg');
+    background-position: center;
+    background-size: cover;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+}
+
+.success{
+  &.steps{
+    background-color: none;
+    border: none;
+  }
+  &::after{
+    background: #3F5D45;
+  }
+  &.step{
+    background-image: url('../../assets/svg/icon__done--white.svg');
+    background-position: center;
+    background-size: contain;
+  }
+  border: 1px solid #3F5D45;
 }
 </style>
