@@ -3,7 +3,8 @@ module.exports = {
     // removeDeprecatedGapUtilities: true,
     // purgeLayersByDefault: true,
   },
-  purge: [],
+  purge: [
+  ],
   theme: {
     textColor: {
       primary: '#3F5D45',

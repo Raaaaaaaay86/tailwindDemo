@@ -42,7 +42,7 @@
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .cube {
   position: relative;
   overflow: hidden;
@@ -74,16 +74,16 @@
     & .cube__text {
       color: #3F5D45;
     }
-  &::after {
-  position: absolute;
-  content: '';
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-color: #FFE180;
-  opacity: 80%;
-  }
+    &::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #FFE180;
+    opacity: 80%;
+    }
   }
 }
 </style>
