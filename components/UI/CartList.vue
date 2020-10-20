@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import CartListItem from '@/components/UI/CardList__item';
+import CartListItem from '@/components/UI/CardList__Item';
 
 export default {
   components: {

@@ -1,6 +1,9 @@
 {
   "name": "tailwindDessert",
   "version": "1.0.0",
+  "engines": {
+    "node": "10.22.0"
+  },
   "private": true,
   "scripts": {
     "dev": "nuxt",
